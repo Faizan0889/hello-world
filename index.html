@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome Page</title>
+    <!-- Tailwind CSS CDN for simple styling -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Custom font for a friendly look */
+        body {
+            font-family: "Inter", sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-gradient-to-br from-blue-400 to-purple-600 min-h-screen flex items-center justify-center p-4">
+    <div class="bg-white p-8 rounded-xl shadow-2xl text-center max-w-md w-full">
+        <h1 class="text-4xl font-extrabold text-gray-800 mb-4 animate-fade-in-down">
+            Hello!
+        </h1>
+        <p class="text-xl text-gray-600 leading-relaxed animate-fade-in-up">
+            Welcome to the <span class="font-semibold text-blue-600">Muhammad Faizan</span> first project page!
+        </p>
+        <div class="mt-8">
+            <svg class="mx-auto w-16 h-16 text-purple-500 animate-bounce" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"></path>
+            </svg>
+        </div>
+    </div>
+    <style>
+        /* Basic animations */
+        @keyframes fade-in-down {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        @keyframes fade-in-up {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        @keyframes bounce {
+            0%, 100% {
+                transform: translateY(-25%);
+                animation-timing-function: cubic-bezier(0.8,0,1,1);
+            }
+            50% {
+                transform: none;
+                animation-timing-function: cubic-bezier(0,0,0.2,1);
+            }
+        }
+        .animate-fade-in-down {
+            animation: fade-in-down 1s ease-out forwards;
+        }
+        .animate-fade-in-up {
+            animation: fade-in-up 1s ease-out 0.5s forwards; /* Delayed start */
+        }
+        .animate-bounce {
+            animation: bounce 1s infinite;
+        }
+    </style>
+</body>
+</html>
